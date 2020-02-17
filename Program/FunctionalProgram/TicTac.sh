@@ -15,7 +15,7 @@ if [ $m1 -eq 3 -o $m2 -eq 3 -o $m3 -eq 3 -o $m4 -eq 3 -o $m5  -eq 3 ]
    then
        echo "player 1 is winner"
      exit
- elif [ $m1 -eq 3 -o $m2 -eq 3 -o $m3 -eq 3 -o $m4 -eq 3 -o $m5 -eq 6 ]
+ elif [ $m1 -eq -3 -o $m2 -eq -3 -o $m3 -eq -3 -o $m4 -eq -3 -o $m5 -eq -3 ]
     then
       echo "player 2 is winner "
       exit
