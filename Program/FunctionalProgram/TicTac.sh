@@ -11,11 +11,14 @@ m2=$(( ${arr[0]}+${arr[3]}+${arr[6]} ))
 m3=$(( ${arr[0]}+${arr[4]}+${arr[8]} ))
 m4=$(( ${arr[3]}+${arr[4]}+${arr[5]} ))
 m5=$(( ${arr[6]}+${arr[7]}+${arr[8]} ))
-if [ $m1 -eq 3 -o $m2 -eq 3 -o $m3 -eq 3 -o $m4 -eq 3 -o $m5  -eq 3 ]
+m6=$(( ${arr[1]}+${arr[4]}+${arr[7]} ))
+m7=$(( ${arr[2]}+${arr[5]}+${arr[8]} ))
+m8=$(( ${arr[2]}+${arr[4]}+${arr[6]} ))
+if [ $m1 -eq 3 -o $m2 -eq 3 -o $m3 -eq 3 -o $m4 -eq 3 -o $m5  -eq 3 -o $m6 -eq 3 -o $m7 -eq 3 -o $m8  -eq 3 ]
    then
        echo "player 1 is winner"
      exit
- elif [ $m1 -eq -3 -o $m2 -eq -3 -o $m3 -eq -3 -o $m4 -eq -3 -o $m5 -eq -3 ]
+ elif [ $m1 -eq -3 -o $m2 -eq -3 -o $m3 -eq -3 -o $m4 -eq -3 -o $m5 -eq -3 -o $m6 -eq -3 -o $m7 -eq -3 -o $m8  -eq -3 ]
     then
       echo "player 2 is winner "
       exit
@@ -42,7 +45,7 @@ do
   if [ $player == 1 ]
    then
      read -p "Enter a number between 0 to 8 " num
-       if [ ${arr[$num]} -eq 0 ]
+       if [ ${arr[$num]} -eq 0 -a $num -lt 9 ]
         then
             #echo "hi"
            arr[$num]=1
